@@ -1,6 +1,8 @@
 import CampoTexto from '../CampoTexto';
+import ComboBox from '../ComboBox';
 import './FormularioPessoa.css';
-const FormularioColaborador = (props) => {
+const FormularioPessoa = (props) => {
+    const reizinho = ['rei 1', 'rei 2', 'rei 3'];
     return (
         <section className='formulario-pessoa'>
             <form>
@@ -8,9 +10,10 @@ const FormularioColaborador = (props) => {
                 <CampoTexto label="Nome" placeholder="Digite o Nome" />
                 <CampoTexto label="Cargo" placeholder="Digite o Cargo" />
                 <CampoTexto label="Imagem" placeholder="Digite o Endereço da Imagem" />
+                <ComboBox  label="Rei no Período" placeholder="Selecione o Rei a Frente no Período" itens={reizinho}/>
             </form>
         </section>
     )
 }
 
-export default FormularioColaborador;
+export default FormularioPessoa;
