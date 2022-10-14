@@ -1,3 +1,4 @@
+import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import ComboBox from '../ComboBox';
 import './FormularioPessoa.css';
@@ -11,6 +12,9 @@ const FormularioPessoa = (props) => {
                 <CampoTexto label="Cargo" placeholder="Digite o Cargo" />
                 <CampoTexto label="Imagem" placeholder="Digite o Endereço da Imagem" />
                 <ComboBox  label="Rei no Período" placeholder="Selecione o Rei a Frente no Período" itens={reizinho}/>
+                <Botao>
+                    Criar Card
+                </Botao>
             </form>
         </section>
     )
