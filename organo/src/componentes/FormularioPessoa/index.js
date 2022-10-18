@@ -5,18 +5,21 @@ import './FormularioPessoa.css';
 import { useState } from 'react';
 
 const FormularioPessoa = (props) => {
-    
-    const reizinhos = ['rei 1', 'rei 2', 'rei 3'];
+    const placeholderReinado = 'Selecione o Rei a Frente no Período';
 
-    const [nome, setNome] = useState('aaa')
+    const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
-    const [reinado, setReinado] = useState('Selecione o Rei a Frente no Período')
+    const [reinado, setReinado] = useState(placeholderReinado)
 
 
     const onPostar = (evento) => {
         evento.preventDefault()
-        console.log('postou => ', nome, cargo, imagem, reinado)
+        props.onNovaPessoaCadastrada({nome, cargo, imagem, reinado})
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setReinado(placeholderReinado)
     }
 
     // const onChangeInput = (evento) => {
@@ -48,7 +51,7 @@ const FormularioPessoa = (props) => {
                 <ComboBox  
                     label="Rei no Período" 
                     placeholder={reinado}
-                    itens={reizinhos}  
+                    itens={props.reis}  
                     required={true}
                     valor={reinado} 
                     onChange={valor => setReinado(valor)} />
