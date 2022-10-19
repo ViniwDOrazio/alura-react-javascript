@@ -1,13 +1,13 @@
 .familia{
     text-align: center;
     padding: 32px;
-    background-color: rgb(255, 200, 200);
+
     color: black;
 }
 
 .familia h3{
     font-size: 32px;
-    border-bottom: 4px solid rgb(75, 0, 0);
+    border-bottom: 4px solid;
     display: inline-block;
     padding-bottom: 4px;
 }

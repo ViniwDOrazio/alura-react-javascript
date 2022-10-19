@@ -1,9 +1,13 @@
 import './Familia.css'
 
 const Familia = (props) => {
+
+    // style=({ })
     return (
-        <section className='familia'>
-            <h3>{props.nome}</h3>
+        <section className='familia' style={{backgroundColor: props.corBackground}}>
+            <h3 style={{borderColor: props.corMarcacao}}>
+                {props.nome}
+            </h3>
         </section>
 
     )

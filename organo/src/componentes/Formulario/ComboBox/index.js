@@ -18,7 +18,7 @@ const ComboBox = (props) => {
                     required={props.required}>
 
                 <option disabled readOnly>{props.placeholder}</option>
-                {props.itens.map(item => <option key={item}>{item}</option>)}
+                {props.itens.map(item => <option key={item.nome}>{item.nome}</option>)}
                 
             </select>
         </div>

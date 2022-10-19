@@ -5,9 +5,14 @@ const Reinado = (props) => {
     return (
         <div className='reinado'>
             <h2>{props.descricao}</h2>
-            <Familia nome='Rei 1' />
-            <Familia nome='Rei 2' />
-            <Familia nome='Rei 3' />
+            {props.reis.map(
+                rei => <Familia 
+                            key={rei.nome} 
+                            nome={rei.nome} 
+                            corBackground={rei.corBackground}
+                            corDestaque={rei.corDestaque}
+                            corMarcacao={rei.corMarcacao}/>
+            )}
         </div>
     )
 }
