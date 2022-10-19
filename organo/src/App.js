@@ -53,14 +53,13 @@ function App() {
   const onNovaPessoaCadastrada = (pessoa) => {
     //console.log(pessoa)
     setPessoas([...pessoas, pessoa])
-    console.log(pessoas)
   }
 
   return (
     <div className="App">
       <Banner />
       <FormularioPessoa onNovaPessoaCadastrada={pessoa => onNovaPessoaCadastrada(pessoa)} reis={reis}/>
-      <Reinado descricao='Familias durante os reinados' reis={reis}/>
+      <Reinado descricao='Familias durante os reinados' reis={reis} pessoas={pessoas}/>
 
     </div>
   );

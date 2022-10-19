@@ -11,3 +11,11 @@
     display: inline-block;
     padding-bottom: 4px;
 }
+
+.familia .pessoas{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+
+}
