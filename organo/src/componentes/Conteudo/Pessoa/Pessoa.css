@@ -1,5 +1,6 @@
 .pessoa {
     width: 280px;
+    margin: 4px 0;
 }
 
 .pessoa .cabecalho {
@@ -22,7 +23,6 @@
 }
 
 .pessoa .rodape h4 {
-    color: #6278F7;
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
@@ -30,8 +30,8 @@
 }
 
 .pessoa .rodape h5 {
-    font-size: 18px;
+    color: #e0e0e0;
+    font-size: 14px;
     line-height: 22px;
-    color: #212121;
     padding: 0 16px;
 }
