@@ -101,6 +101,7 @@ function App() {
       <Banner />
       <FormularioPessoa onNovaPessoaCadastrada={pessoa => onNovaPessoaCadastrada(pessoa)} reis={reis}/>
       <Reinado descricao='Familias durante os reinados' reis={reis} pessoas={pessoas}/>
+      <Footer facebook='https://www.facebook.com/viniw.md' instagram='https://www.facebook.com/viniw.md' twitter='https://twitter.com/_Viniw' />
     </div>
   );
 }

@@ -1,0 +1,33 @@
+.footer{
+    background-color: #600b0b;
+    text-align: center;
+    
+    width: 100%;
+}
+
+.coluna1de3{
+    color:white;
+    width: 30%;
+    margin: 20px auto;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.footer .social img{
+    height: 20px;
+    margin: 8px
+}
+
+.footer .logo img{
+    height: 40px;
+}
+.footer img {
+    max-width: 100%;
+} 
+
+.footer .criador {
+    margin: 0;
+    text-align: right;
+    vertical-align: bottom;
+}
