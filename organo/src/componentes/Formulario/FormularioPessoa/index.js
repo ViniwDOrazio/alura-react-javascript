@@ -10,10 +10,11 @@ const FormularioPessoa = (props) => {
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
-    const [reinado, setReinado] = useState(placeholderReinado)
+    const [reinado, setReinado] = useState('');
 
 
     const onPostar = (evento) => {
+        //debugger
         evento.preventDefault()
         props.onNovaPessoaCadastrada({nome, cargo, imagem, reinado})
         setNome('')
@@ -47,6 +48,7 @@ const FormularioPessoa = (props) => {
                     label="Imagem" 
                     placeholder="Digite o Endereço da Imagem" 
                     valor={imagem} 
+                    required={false}
                     onChange={valor => setImagem(valor)} />
                 <ComboBox  
                     label="Rei no Período" 
