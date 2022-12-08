@@ -1,3 +1,5 @@
+@import "../../Estilos/variaveis";
+
 .banner {
     display: flex;
     align-items: center;
@@ -16,7 +18,8 @@
     h1 {
         position: absolute;
         z-index: 1;
-        color: #d9d9d9;
+        color: $banner-cor-fonte-titulo;
+        font-family: $banner-fonte-titulo;
         font-size: 2.5rem;
         width: 401px;
         height: 144px;

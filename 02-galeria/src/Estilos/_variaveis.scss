@@ -1,0 +1,48 @@
+$fonte-family-gandhi-normal: "GandhiSansRegular";
+$fonte-family-gandhi-negrito: "GandhiSansBold";
+
+$fonte-family-padrao: $fonte-family-gandhi-normal;
+$fonte-family-destaque: $fonte-family-gandhi-negrito;
+
+$azul-escuro: #041833;
+$azul-claro: #154580;
+$azul: #04244f;
+$branco: #d9d9d9;
+$rosa: #c98cf1;
+$roxo: #7b78e5;
+$preto: #000000;
+
+$body-gradiente-cor-inicial: $azul-escuro;
+$body-gradiente-cor-final: $azul-claro;
+$body-scroll-cor: $azul-claro;
+
+$cor-do-texto-padrao: $branco;
+
+$cabecalho-gradiente-inicio: $rosa;
+$cabecalho-gradiente-final: $roxo;
+$cabecalho-cor-fonte-titulo: $branco;
+
+$menu-cor-fonte-normal: $branco;
+$menu-cor-fonte-atual: $roxo;
+$menu-fonte-family-padrao: $fonte-family-gandhi-normal;
+$menu-fonte-family-destaque: $fonte-family-gandhi-negrito;
+
+$banner-fonte-titulo: $fonte-family-destaque;
+$banner-cor-fonte-titulo: $branco;
+
+$rodape-cor-fundo: $azul;
+$rodape-cor-sombra: $preto;
+$rodape-cor-texto: $cor-do-texto-padrao;
+$rodape-cor-link: $rosa;
+$rodape-cor-link-sobre: $cor-do-texto-padrao;
+
+
+
+
+
+
+
+$cinza-claro: #9d9d9d;
+$tag-color: rgba(148, 163, 184,0.3);
+
+//$cabecalho-fonte-family-titulo: $fonte-family-destaque;
