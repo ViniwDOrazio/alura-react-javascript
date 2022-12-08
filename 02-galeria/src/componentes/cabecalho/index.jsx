@@ -1,4 +1,4 @@
-import logo from './logo.png'
+import logo from './img/logo.png'
 import search from './search.png'
 import Estilos from './cabecalho.module.scss'
 export default function Cabecalho(){
