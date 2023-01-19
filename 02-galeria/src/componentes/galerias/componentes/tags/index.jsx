@@ -1,15 +1,15 @@
 import Estilos from './tags.module.scss'
 
-export default function Tags() {
+export default function Tags({tags, filtrarFotos}) {
   return (
     <div className={Estilos.tags}>
-        <p>Tags:</p>
-        <ul className={Estilos.tags__lista}>
-            <li>Estrelas</li>
-            <li>Galáxias</li>
-            <li>Lua</li>
-            <li>Planetas</li>
-        </ul>
+      <p>Tags:</p>
+      <ul className={Estilos.tags__lista}>
+        {tags.map(tag => {
+            return <li key={tag} onClick={()=>filtrarFotos(tag)}>{tag}</li>
+          })}
+        <li key="Todas" onClick={()=>filtrarFotos()}>Todas</li>
+      </ul>
     </div>
   )
 }
