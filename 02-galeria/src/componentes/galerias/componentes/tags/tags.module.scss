@@ -1,0 +1,37 @@
+@import "../../../../Estilos/variaveis";
+
+.tags {
+    width: 65vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $galeria-tag-cor-texto;
+    font-family: $fonte-family-padrao;
+    font-size: 16px;
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    &__lista {
+        list-style: none;
+        width: 380px;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            background-color: $galeria-tag-cor;
+            padding: 6px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: $galeria-tag-cor-sobre;
+            padding: 6px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+}
