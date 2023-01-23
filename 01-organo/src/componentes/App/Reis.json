@@ -1,0 +1,42 @@
+[{
+	"nome": "Aegon I",
+	"corBackground": "rgb(255, 230, 230)",
+	"corDestaque": "rgb(255, 155, 155)",
+	"corMarcacao": "rgb(75, 0, 0)"
+},
+{
+	"nome": "Aenys I",
+	"corBackground": "rgb(230, 255, 230)",
+	"corDestaque": "rgb(155, 255, 155)",
+	"corMarcacao": "rgb(0, 75, 0)"
+},
+{
+	"nome": "Maegor I",
+	"corBackground": "rgb(230, 230, 255)",
+	"corDestaque": "rgb(155, 155, 255)",
+	"corMarcacao": "rgb(0, 0, 75)"
+},
+{
+	"nome": "Jaehaerys I",
+	"corBackground": "rgb(255, 255, 230)",
+	"corDestaque": "rgb(255, 255, 155)",
+	"corMarcacao": "rgb(75, 75, 0)"
+},
+{
+	"nome": "Viserys I",
+	"corBackground": "rgb(230, 255, 255)",
+	"corDestaque": "rgb(155, 255, 255)",
+	"corMarcacao": "rgb(0, 75, 75)"
+},
+{
+	"nome": "Aegon II",
+	"corBackground": "rgb(255, 230, 255)",
+	"corDestaque": "rgb(255, 155, 255)",
+	"corMarcacao": "rgb(75, 0, 75)"
+},
+{
+	"nome": "Aegon III",
+	"corBackground": "rgb(255, 255, 255)",
+	"corDestaque": "rgb(155, 155, 155)",
+	"corMarcacao": "rgb(75, 75, 75)"
+}]
