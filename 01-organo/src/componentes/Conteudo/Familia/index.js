@@ -11,11 +11,29 @@ const Familia = (props) => {
             </h3>
             <div className='pessoas'>
                 {props.pessoas.map(pessoa => <Pessoa nome={pessoa.nome} 
-                                                     key={pessoa.nome} 
-                                                     cargo={pessoa.cargo} 
-                                                     imagem={pessoa.imagem}
-                                                     cor={props.corDestaque}
-                                                     corFonte={props.corMarcacao}/>)}
+                                    key={pessoa.nome} 
+                                    cargo={pessoa.cargo} 
+                                    imagem={pessoa.imagem}
+                                    cor={props.corDestaque}
+                                    corFonte={props.corMarcacao}
+                                    aoDeletar={props.aoDeletar}/>
+                // {
+                //     // console.log(<Pessoa nome={pessoa.nome} 
+                //     //     key={pessoa.nome} 
+                //     //     cargo={pessoa.cargo} 
+                //     //     imagem={pessoa.imagem}
+                //     //     cor={props.corDestaque}
+                //     //     corFonte={props.corMarcacao}
+                //     //     aoDeletar={props.aoDeletar}/>);
+                //     return <Pessoa nome={pessoa.nome} 
+                //     key={pessoa.nome} 
+                //     cargo={pessoa.cargo} 
+                //     imagem={pessoa.imagem}
+                //     cor={props.corDestaque}
+                //     corFonte={props.corMarcacao}
+                //     aoDeletar={props.aoDeletar}/>
+                // }
+                )}
             </div>
         </section>
         //: ""

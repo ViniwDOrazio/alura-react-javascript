@@ -12,7 +12,8 @@ const Reinado = (props) => {
                             corBackground={rei.corBackground}
                             corDestaque={rei.corDestaque}
                             corMarcacao={rei.corMarcacao}
-                            pessoas={props.pessoas.filter(pessoa => pessoa.reinado === rei.nome)}/>
+                            pessoas={props.pessoas.filter(pessoa => pessoa.reinado === rei.nome)}
+                            aoDeletar={props.aoDeletar}/>
             )}
         </div>
     )

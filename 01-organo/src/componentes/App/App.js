@@ -14,12 +14,17 @@ function App() {
     //console.log(pessoa)
     setPessoas([...pessoas, pessoa])
   }
+  
+  function deletarPessoa() 
+  {
+    console.log("Delete");
+  }
 
   return (
     <div className="App">
       <Banner />
       <FormularioPessoa onNovaPessoaCadastrada={pessoa => onNovaPessoaCadastrada(pessoa)} reis={reisJSON}/>
-      <Reinado descricao='Familias durante os reinados' reis={reisJSON} pessoas={pessoas}/>
+      <Reinado descricao='Familias durante os reinados' reis={reisJSON} pessoas={pessoas} aoDeletar={deletarPessoa}/>
       <Footer facebook='https://www.facebook.com/viniw.md' instagram='https://www.facebook.com/viniw.md' twitter='https://twitter.com/_Viniw' />
     </div>
   );

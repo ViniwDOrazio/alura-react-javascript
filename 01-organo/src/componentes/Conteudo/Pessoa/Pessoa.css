@@ -1,6 +1,7 @@
 .pessoa {
     width: 280px;
     margin: 4px 0;
+    position: relative;
 }
 
 .pessoa .cabecalho {
@@ -34,4 +35,11 @@
     font-size: 14px;
     line-height: 22px;
     padding: 0 16px;
+}
+
+.deletarPessoa{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 14;
 }
