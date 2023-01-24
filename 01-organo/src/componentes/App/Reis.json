@@ -1,42 +1,42 @@
 [{
 	"nome": "Aegon I",
-	"corBackground": "rgb(255, 230, 230)",
-	"corDestaque": "rgb(255, 155, 155)",
-	"corMarcacao": "rgb(75, 0, 0)"
+	"corBackground": "#FFE6E6",
+	"corDestaque": "#FF9999",
+	"corMarcacao": "#4B0000"
 },
 {
 	"nome": "Aenys I",
-	"corBackground": "rgb(230, 255, 230)",
-	"corDestaque": "rgb(155, 255, 155)",
-	"corMarcacao": "rgb(0, 75, 0)"
+	"corBackground": "#E6FFE6",
+	"corDestaque": "#99FF99",
+	"corMarcacao": "#004B00"
 },
 {
 	"nome": "Maegor I",
-	"corBackground": "rgb(230, 230, 255)",
-	"corDestaque": "rgb(155, 155, 255)",
-	"corMarcacao": "rgb(0, 0, 75)"
+	"corBackground": "#E6E6FF",
+	"corDestaque": "#9999FF",
+	"corMarcacao": "#00004B"
 },
 {
 	"nome": "Jaehaerys I",
-	"corBackground": "rgb(255, 255, 230)",
-	"corDestaque": "rgb(255, 255, 155)",
-	"corMarcacao": "rgb(75, 75, 0)"
+	"corBackground": "#FFFFE6",
+	"corDestaque": "#FFFF99",
+	"corMarcacao": "#4B4B00"
 },
 {
 	"nome": "Viserys I",
-	"corBackground": "rgb(230, 255, 255)",
-	"corDestaque": "rgb(155, 255, 255)",
-	"corMarcacao": "rgb(0, 75, 75)"
+	"corBackground": "#E6FFFF",
+	"corDestaque": "#99FFFF",
+	"corMarcacao": "#004B4B"
 },
 {
 	"nome": "Aegon II",
-	"corBackground": "rgb(255, 230, 255)",
-	"corDestaque": "rgb(255, 155, 255)",
-	"corMarcacao": "rgb(75, 0, 75)"
+	"corBackground": "#FFE6FF",
+	"corDestaque": "#FF99FF",
+	"corMarcacao": "#4B004B"
 },
 {
 	"nome": "Aegon III",
-	"corBackground": "rgb(255, 255, 255)",
-	"corDestaque": "rgb(155, 155, 155)",
-	"corMarcacao": "rgb(75, 75, 75)"
+	"corBackground": "#FFFFFF",
+	"corDestaque": "#999999",
+	"corMarcacao": "#4B4B4B"
 }]

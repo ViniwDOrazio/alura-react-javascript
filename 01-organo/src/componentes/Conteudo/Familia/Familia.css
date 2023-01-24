@@ -1,7 +1,7 @@
 .familia{
+    position: relative;
     text-align: center;
     padding: 32px;
-
     color: black;
 }
 
@@ -18,4 +18,10 @@
     margin-top: 32px;
     flex-wrap: wrap;
 
+}
+
+.input-cor{
+    position: absolute;
+    top: 20px;
+    right: 50px;
 }

@@ -1,42 +1,32 @@
 import Pessoa from '../Pessoa';
 import './Familia.css'
 
-const Familia = (props) => {
+const Familia = ({rei, pessoas, aoDeletar, aoMudarCorFamilia}) => {
+    // return(
+    //     (validacao) ? 
+    //       <>conteudo</>
+    //     : ""
+    // )
+    // return(
+    //     (validacao) &&
+    //     <>conteudo</>
+    // )
     return (
-        (props.pessoas.length > 0) && 
-        //(props.pessoas.length > 0) ? 
-        <section className='familia' style={{backgroundColor: props.corBackground}}>
-            <h3 style={{borderColor: props.corMarcacao}}>
-                {props.nome}
+        (pessoas.length > 0) && 
+        <section className='familia' style={{backgroundColor: rei.corBackground}}>
+            <input onChange={evento => aoMudarCorFamilia(rei, evento.target.value)} value={rei.corMarcacao} type='color' className='input-cor' />
+            <h3 style={{borderColor: rei.corMarcacao, color: rei.corFonte}}>
+                {rei.nome}
             </h3>
             <div className='pessoas'>
-                {props.pessoas.map(pessoa => <Pessoa nome={pessoa.nome} 
-                                    key={pessoa.nome} 
-                                    cargo={pessoa.cargo} 
-                                    imagem={pessoa.imagem}
-                                    cor={props.corDestaque}
-                                    corFonte={props.corMarcacao}
-                                    aoDeletar={props.aoDeletar}/>
-                // {
-                //     // console.log(<Pessoa nome={pessoa.nome} 
-                //     //     key={pessoa.nome} 
-                //     //     cargo={pessoa.cargo} 
-                //     //     imagem={pessoa.imagem}
-                //     //     cor={props.corDestaque}
-                //     //     corFonte={props.corMarcacao}
-                //     //     aoDeletar={props.aoDeletar}/>);
-                //     return <Pessoa nome={pessoa.nome} 
-                //     key={pessoa.nome} 
-                //     cargo={pessoa.cargo} 
-                //     imagem={pessoa.imagem}
-                //     cor={props.corDestaque}
-                //     corFonte={props.corMarcacao}
-                //     aoDeletar={props.aoDeletar}/>
-                // }
+                {pessoas.map(pessoa => <Pessoa key={pessoa.nome} 
+                                               pessoa={pessoa}
+                                               cor={rei.corDestaque}
+                                               corFonte={rei.corMarcacao}
+                                               aoDeletar={aoDeletar}/>
                 )}
             </div>
         </section>
-        //: ""
     )
 }
 
