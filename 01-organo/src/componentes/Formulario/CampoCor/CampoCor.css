@@ -1,0 +1,14 @@
+.campo-cor{
+    margin: 24px 0px;
+    font-size: 24px;
+}
+
+.campo-cor label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.campo-cor input{
+    height: 50px;
+    width: 100px;
+}

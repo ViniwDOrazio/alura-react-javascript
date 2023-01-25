@@ -1,7 +1,7 @@
-import Botao from '../Botao';
-import CampoTexto from '../CampoTexto';
-import ComboBox from '../ComboBox';
-import './FormularioPessoa.css';
+import Botao from '../../Botao';
+import CampoTexto from '../../CampoTexto';
+import ComboBox from '../../ComboBox';
+import '../Formularios.css';
 import { useState } from 'react';
 
 const FormularioPessoa = (props) => {
@@ -29,7 +29,7 @@ const FormularioPessoa = (props) => {
     // }
 
     return (
-        <section className='formulario-pessoa'>
+        <section className='formulario'>
             <form onSubmit={onPostar}>
                 <h2>Preencha os dados do membro da Família Targaryen</h2>
                 <CampoTexto 

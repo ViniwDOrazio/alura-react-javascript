@@ -1,11 +1,11 @@
-.formulario-pessoa{
+.formulario{
     display: flex;
     justify-content: center;
-    margin: 80px 0;
+    width: 45%;
+    margin: 5% 0 2.5% 0;
 }
 
-.formulario-pessoa form{
-    max-width: 80%;
+.formulario form{
     background-color: #f8c3c3;
     border-radius: 20px;
     padding: 36px 64px;
