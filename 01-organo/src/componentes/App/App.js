@@ -2,8 +2,7 @@ import { useState } from 'react';
 import Banner from '../Banner';
 import Reinado from '../Conteudo/Reinado';
 import Footer from '../Footer';
-import FormularioPessoa from '../Formulario/Formularios/Pessoa';
-import FormularioReinado from '../Formulario/Formularios/Reinado';
+import Formularios from '../Formulario/Formularios';
 import reisJSON from './Reis.json';
 import pessoasJSON from './Pessoas.json';
 import hexToRgba from 'hex-to-rgba';
@@ -27,6 +26,14 @@ function App() {
       rei.corBackground = hexToRgba(rei.corMarcacao, 0.25);
 
     setReis([...reis, rei])
+  }
+  function aoFavoritar(pessoaAlterar) {
+    setPessoas(pessoas.map(pessoa => {
+      if(pessoa === pessoaAlterar) {
+        pessoa.favorito = ! pessoa.favorito; 
+      }
+      return pessoa;
+    }));
   }
 
   function aoMudarCorFamilia(reiAlterar, cor){
@@ -58,11 +65,14 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <div className='formularios'>
-        <FormularioPessoa onNovaPessoaCadastrada={pessoa => aoNovaPessoaCadastrada(pessoa)} reis={reis}/>
-        <FormularioReinado onNovoReinado={rei => aoNovoReinado(rei)} reis={reis} />
-      </div>
-      <Reinado descricao='Familias durante os reinados' reis={reis} pessoas={pessoas} aoDeletar={deletarPessoa} aoMudarCorFamilia={aoMudarCorFamilia}/>
+      <Formularios reis={reis} aoNovaPessoaCadastrada={aoNovaPessoaCadastrada} aoNovoReinado={aoNovoReinado} />
+      <Reinado 
+        descricao='Familias durante os reinados' 
+        reis={reis} 
+        pessoas={pessoas} 
+        aoDeletar={deletarPessoa} 
+        aoMudarCorFamilia={aoMudarCorFamilia}
+        aoFavoritar={aoFavoritar}/>
       <Footer facebook='https://www.facebook.com/viniw.md' instagram='https://www.facebook.com/viniw.md' twitter='https://twitter.com/_Viniw' />
     </div>
   );

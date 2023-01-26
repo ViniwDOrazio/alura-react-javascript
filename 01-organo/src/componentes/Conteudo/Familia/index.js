@@ -7,7 +7,7 @@ import './Familia.css'
 
 //     )
 // }
-const Familia = ({rei, pessoas, aoDeletar, aoMudarCorFamilia}) => {
+const Familia = ({rei, pessoas, aoDeletar, aoMudarCorFamilia, aoFavoritar}) => {
     // return(
     //     (validacao) ? 
     //       <>conteudo</>
@@ -31,7 +31,8 @@ const Familia = ({rei, pessoas, aoDeletar, aoMudarCorFamilia}) => {
                                     pessoa={pessoa}
                                     cor={rei.corDestaque}
                                     corFonte={rei.corMarcacao}
-                                    aoDeletar={aoDeletar}/>)}</>
+                                    aoDeletar={aoDeletar}
+                                    aoFavoritar={aoFavoritar}/>)}</>
                     : <Pessoa pessoa={{nome: 'Nenhuma', cargo: 'Não definido', imagem: "/imagens/perfil-vazio.jpg", reinado: ''}}
                             cor={rei.corDestaque} 
                             corFonte={rei.corMarcacao} />

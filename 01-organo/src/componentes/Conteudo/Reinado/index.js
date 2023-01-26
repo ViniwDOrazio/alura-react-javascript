@@ -1,7 +1,7 @@
 import Familia from '../Familia';
 import './Reinado.css'
 
-const Reinado = ({descricao, reis, pessoas, aoDeletar, aoMudarCorFamilia}) => {
+const Reinado = ({descricao, reis, pessoas, aoDeletar, aoMudarCorFamilia, aoFavoritar}) => {
     // console.log(descricao);
     return (
         <div className='reinado'>
@@ -11,7 +11,8 @@ const Reinado = ({descricao, reis, pessoas, aoDeletar, aoMudarCorFamilia}) => {
                                       key={rei.nome}
                                       pessoas={pessoas.filter(pessoa => pessoa.reinado === rei.nome)}
                                       aoDeletar={aoDeletar}
-                                      aoMudarCorFamilia={aoMudarCorFamilia} />)}
+                                      aoMudarCorFamilia={aoMudarCorFamilia}
+                                      aoFavoritar={aoFavoritar}/>)}
         </div>
     )
 }
