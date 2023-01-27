@@ -12,6 +12,7 @@ import './App.css';
 function App() {
   const [reis, setReis] = useState(reisJSON)
   const [pessoas, setPessoas] = useState(pessoasJSON)
+  const [mostrarCadastro, setMostrarCadastro] = useState(false);
 
   const aoNovaPessoaCadastrada = (pessoa) => {
     setPessoas([...pessoas, pessoa])
@@ -27,6 +28,11 @@ function App() {
 
     setReis([...reis, rei])
   }
+
+  function aoMostrarCadastro() {
+    setMostrarCadastro(!mostrarCadastro);
+  }
+
   function aoFavoritar(pessoaAlterar) {
     setPessoas(pessoas.map(pessoa => {
       if(pessoa === pessoaAlterar) {
@@ -61,11 +67,11 @@ function App() {
     // console.log(lista)
     // setPessoas([...lista]);
   }
-
+  
   return (
     <div className="App">
       <Banner />
-      <Formularios reis={reis} aoNovaPessoaCadastrada={aoNovaPessoaCadastrada} aoNovoReinado={aoNovoReinado} />
+      <Formularios reis={reis} aoNovaPessoaCadastrada={aoNovaPessoaCadastrada} aoNovoReinado={aoNovoReinado} cadastroVisivel={mostrarCadastro} aoMostrarCadastro={aoMostrarCadastro}/>
       <Reinado 
         descricao='Familias durante os reinados' 
         reis={reis} 

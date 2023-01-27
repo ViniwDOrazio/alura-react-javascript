@@ -29,9 +29,9 @@ const FormularioPessoa = (props) => {
     // }
 
     return (
-        <section className='formulario'>
+        <section className=''>
             <form onSubmit={onPostar}>
-                <h2>Preencha os dados do membro da Família Targaryen</h2>
+                <h3>Preencha os dados do membro da Família Targaryen</h3>
                 <CampoTexto 
                     label="Nome" 
                     placeholder="Digite o Nome" 

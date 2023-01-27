@@ -6,11 +6,32 @@
     margin: 80px 20px;
 }
 
-.formularios form{
+.formulario{
+    flex: 1;
+    min-width: 250px;
+}
+
+.formularios form {
     background-color: #f8c3c3;
     border-radius: 20px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
     flex: 1;
     padding: 36px 64px;
+}
 
+.formularios-titulo {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.formularios-titulo h2{
+    float: left;
+    margin: auto;
+}
+
+.formularios-icon {
+    float: left;
+    margin: auto 20px;
 }

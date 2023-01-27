@@ -23,7 +23,7 @@ const FormularioReinado = (props) => {
     return (
         <section className='formulario'>
             <form onSubmit={onPostar}>
-                <h2>Preencha os dados do Reinado</h2>
+                <h3>Preencha os dados do Reinado</h3>
                 <CampoTexto 
                     label="Nome" 
                     placeholder="Digite o Nome" 
