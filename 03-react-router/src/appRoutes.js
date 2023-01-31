@@ -1,14 +1,14 @@
+import Header from "componentes/header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Menu from "./componentes/menu";
 import HomePage from "./paginas/homePage";
 import NotFound from "./paginas/notFound";
 import Sobre from "./paginas/sobre";
 
-function App() {
+function AppRoutes() {
   // console.log(window.location);
   return (
     <BrowserRouter>
-      <Menu />
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/sobre/*" element={<Sobre />} />
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRoutes;

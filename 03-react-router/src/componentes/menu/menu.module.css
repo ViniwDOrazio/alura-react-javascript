@@ -12,6 +12,10 @@
     color: var(--cor-fonte-principal);
 }
 
+.linkSelecionado {
+    text-decoration: underline;
+}
+
 @media (max-width: 744px) {
     .navegacao {
         height: 72px;
