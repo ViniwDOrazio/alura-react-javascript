@@ -1,12 +1,13 @@
-import React from 'react'
+import CardPostagem from 'componentes/cardPostagem'
+import Estilos from './homePath.module.css'
+import listaPostagens from './listaPostagens.json'
 
 export default function HomePage() {
   return (
-    <header className="App-header">
-        <h1>Início</h1>
-        <p>{window.location.href}</p>
-        <p>{window.location.origin}</p>
-        <p>{window.location.pathname}</p>
-    </header>
+    <ul className={Estilos.posts}>
+      {listaPostagens.map((postagem) => (
+        <li key={postagem.id}><CardPostagem post={postagem} /></li>
+      ))}
+    </ul>
   )
 }

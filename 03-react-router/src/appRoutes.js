@@ -1,4 +1,6 @@
 import Header from "componentes/header";
+import Rodape from "componentes/Rodape";
+import PaginaPadrao from "paginas/Padrao";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./paginas/homePage";
 import NotFound from "./paginas/notFound";
@@ -10,10 +12,13 @@ function AppRoutes() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/sobre/*" element={<Sobre />} />
+        <Route path="/" element={<PaginaPadrao />} >
+          <Route index element={<HomePage />} />
+          <Route path="sobre" element={<Sobre />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Rodape />
     </BrowserRouter>
   );
 }
