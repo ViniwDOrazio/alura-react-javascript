@@ -1,6 +1,4 @@
 import Estilos from './postagem.module.css'
-
-
 export default function Postagem({children, fotoCapa, titulo}) {
     console.log(Estilos);
   return (

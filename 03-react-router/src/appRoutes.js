@@ -1,5 +1,6 @@
 import Header from "componentes/header";
 import Rodape from "componentes/Rodape";
+import Artigo from "paginas/artigo";
 import PaginaPadrao from "paginas/Padrao";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./paginas/homePage";
@@ -16,6 +17,8 @@ function AppRoutes() {
           <Route index element={<HomePage />} />
           <Route path="sobre" element={<Sobre />} />
         </Route>
+        <Route path="artigo/:id/:titulo" element={<Artigo />} />
+        <Route path="artigo/:id" element={<Artigo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Rodape />

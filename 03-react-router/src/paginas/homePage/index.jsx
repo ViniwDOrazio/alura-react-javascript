@@ -1,12 +1,12 @@
-import CardPostagem from 'componentes/cardPostagem'
+import CartaoArtigos from 'componentes/cartaoArtigos'
 import Estilos from './homePath.module.css'
-import listaPostagens from './listaPostagens.json'
+import listaPostagens from 'assets/listaPostagens.json'
 
 export default function HomePage() {
   return (
     <ul className={Estilos.posts}>
       {listaPostagens.map((postagem) => (
-        <li key={postagem.id}><CardPostagem post={postagem} /></li>
+        <li key={postagem.id}><CartaoArtigos post={postagem} /></li>
       ))}
     </ul>
   )
