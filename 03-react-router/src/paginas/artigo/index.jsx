@@ -4,6 +4,8 @@ import listaPostagens from 'assets/listaPostagens.json'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import NotFound from 'paginas/notFound';
 import Banner from 'componentes/banner';
+import ListaArtigos from 'paginas/listaArtigos';
+import Estilos from './artigo.module.css'
 
 export default function Artigo() {
   const UserParam = useParams();
@@ -25,7 +27,9 @@ export default function Artigo() {
         <ReactMarkdown>
           {artigoSelecionado.texto}
         </ReactMarkdown>
-    </Postagem>
+      </Postagem>
+      <h2 className={Estilos.tituloOutrosPosts}>Outras Postagens</h2>
+      <ListaArtigos QuantidadeMaximoDeCardsNaTela={4} IdCardAtual={artigoSelecionado.id} />
     </>
   )
 }

@@ -8,7 +8,7 @@ export default function Postagem({children, fotoCapa, titulo}) {
             {titulo}
         </h2>
         <div className={Estilos.postConteudoContainer}>
-            {children} 
+            {children}
         </div>
     </article>
   )
