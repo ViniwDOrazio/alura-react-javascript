@@ -1,0 +1,15 @@
+Esse repositorio é destinado a pequenos cursos feitos aleatoriamente, pequenos e/ou sem pretenções de se tornarem um repositório a parte.
+Sobre os diretórios:
+
+Javascript 
+	.\01-organo\
+		Curso 1
+	.\02-galeria\
+		Curso 2
+	.\03-react-router\
+		Curso 3
+		Curso 4 
+		
+TypeScript
+	.\04-react-integrando-api\ 
+		Curso 5 - React: integrando seu projeto React com APIs - 8h - Alura
