@@ -2,8 +2,8 @@ version: '3.8'
 services:
    web:
       build: .
-      command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py loaddata seed.json && python manage.py runserver 0.0.0.0:8000"
+      command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py loaddata seed.json && python manage.py runserver 0.0.0.0:8001"
       volumes:
       - .:/app
       ports:
-          - 8000:8000
+          - 8001:8001
