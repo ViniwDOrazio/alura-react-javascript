@@ -8,7 +8,7 @@ import IPaginacao from '../../interfaces/IPaginacao';
 const ListaRestaurantes = () => {
 
   const [restaurantes, setRestaurantes] = useState<IRestaurante[]>([])
-  const [proximaPagina, setProximaPagina] = useState('http://localhost:8001/api/v1/restaurantes/')
+  const [proximaPagina, setProximaPagina] = useState('http://localhost:8002/api/v1/restaurantes/')
 
   const CarregarConteudoPagina = () => {
     axios.get<IPaginacao<IRestaurante>>(proximaPagina)
