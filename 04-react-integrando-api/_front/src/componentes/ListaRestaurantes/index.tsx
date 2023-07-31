@@ -6,28 +6,39 @@ import axios from 'axios';
 import IPaginacao from '../../interfaces/IPaginacao';
 
 const ListaRestaurantes = () => {
+  const modeExibicaoVerMais = false;
+  const URL_INICIAL = 'http://localhost:8002/api/v1/restaurantes/'
 
   const [restaurantes, setRestaurantes] = useState<IRestaurante[]>([])
-  const [proximaPagina, setProximaPagina] = useState('http://localhost:8002/api/v1/restaurantes/')
+  const [proximaPagina, setProximaPagina] = useState('')
+  const [anteriorPagina, setAnteriorPagina] = useState('');
 
-  const CarregarConteudoPagina = () => {
-    axios.get<IPaginacao<IRestaurante>>(proximaPagina)
+  const CarregarConteudoPagina = (url:string) => {
+    axios.get<IPaginacao<IRestaurante>>(url)
     .then(resposta => {
-      setRestaurantes([...restaurantes, ...resposta.data.results])
+      if (modeExibicaoVerMais) {
+        setRestaurantes([...restaurantes, ...resposta.data.results])
+      } else {
+        setRestaurantes(resposta.data.results)
+      }
       setProximaPagina(resposta.data.next)
+      setAnteriorPagina(resposta.data.previous)
     })
     .catch(error => {console.log(error)})
   }
 
   useEffect(()=>{
-    CarregarConteudoPagina()
+    CarregarConteudoPagina(URL_INICIAL)
   }, []);
 
   return (<section className={style.ListaRestaurantes}>
     <h1>Os restaurantes mais <em>bacanas</em>!</h1>
     {restaurantes?.map(item => <Restaurante restaurante={item} key={item.id} />)}
 
-    {proximaPagina && <button onClick={CarregarConteudoPagina}>Ver Mais</button>}
+    {(!modeExibicaoVerMais) && <button onClick={() => CarregarConteudoPagina(anteriorPagina)} disabled={!anteriorPagina}>Anterior</button>}
+    {(!modeExibicaoVerMais) && <button onClick={() => CarregarConteudoPagina(proximaPagina)} disabled={!proximaPagina}>Proxima</button>}
+
+    {modeExibicaoVerMais && proximaPagina && <button onClick={() => CarregarConteudoPagina(proximaPagina)}>Ver Mais</button>}
   </section>)
 }
 
