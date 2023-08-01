@@ -1,19 +1,29 @@
 import { useEffect, useState } from "react"
 import IRestaurante from "../../../interfaces/IRestaurante"
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
+import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import axios from "axios"
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminisracaoRestaurantes() {
-  const [restaurantes, setRestaurantes] = useState<IRestaurante[]>([])
-  const [URLAPIRestaurantes, setURLAPIRestaurantes] = useState('http://localhost:8002/api/v2/restaurantes/')
+  const goTo= useNavigate();
 
+  const [restaurantes, setRestaurantes] = useState<IRestaurante[]>([])
+  const URL_API = 'http://localhost:8002/api/v2/restaurantes/'
 
   const CarregarConteudoPagina = () => {
-    axios.get<IRestaurante[]>(URLAPIRestaurantes)
+    axios.get<IRestaurante[]>(URL_API)
       .then(resposta => {
-        setRestaurantes([...restaurantes, ...resposta.data])
+        setRestaurantes(resposta.data)
       })
       .catch(error => { console.log(error) })
+  }
+
+  const DeleteRestaurante = (restauranteExcluir: IRestaurante) => {
+    axios.delete(`http://localhost:8002/api/v2/restaurantes/${restauranteExcluir.id}/`)
+      .then(() => {
+        const listaFiltrada = restaurantes.filter(restaurante => restaurante !== restauranteExcluir) 
+        setRestaurantes([...listaFiltrada])
+      })
   }
 
   useEffect(() => {
@@ -31,6 +41,9 @@ export default function AdminisracaoRestaurantes() {
             <TableCell>
               Nome
             </TableCell>
+            <TableCell>
+              Ações
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -42,12 +55,16 @@ export default function AdminisracaoRestaurantes() {
               <TableCell>
                 {restaurante.nome}
               </TableCell>
+              <TableCell>
+                
+                {/* [<Link to={`/admin/restaurantes/${restaurante.id}`}>Editar</Link> | <Link to={`/admin/restaurantes/${restaurante.id}`}>Excluir</Link>] */}
+                <Button variant="outlined" onClick={() => {goTo(`/admin/restaurantes/${restaurante.id}`)}}>Editar</Button>
+                <Button variant="outlined" color="error" onClick={() => DeleteRestaurante(restaurante)}>Excluir</Button>
+              </TableCell>
             </TableRow>
           )}
         </TableBody>
       </Table>
-
-
     </TableContainer>
   )
 }
