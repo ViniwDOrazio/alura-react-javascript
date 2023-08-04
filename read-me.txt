@@ -13,3 +13,7 @@ Javascript
 TypeScript
 	.\04-react-integrando-api\ 
 		Curso 5 - React: integrando seu projeto React com APIs - 8h - Alura
+
+Curso Javascript escrito em TypeScript
+	.\05-cinetag\
+		Curso 6 - React: praticando React com Js - 8h - Alura
