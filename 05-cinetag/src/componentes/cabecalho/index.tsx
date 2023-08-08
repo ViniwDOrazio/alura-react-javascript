@@ -12,7 +12,6 @@ export default function Cabecalho() {
     <nav>
     <LinkCabecalho url="./">Home</LinkCabecalho>
     <LinkCabecalho url="./Favoritos">Favoritos</LinkCabecalho>
-    <LinkCabecalho url="./">Favoritos</LinkCabecalho>
     </nav>
   </header>
   )

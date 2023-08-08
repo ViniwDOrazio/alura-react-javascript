@@ -1,0 +1,18 @@
+.cartaoContainer {
+    padding: 0 0 1em 0;
+    margin-top: .5em;
+    width: 282px;
+    background-color: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartaoContainer a{
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.imagemContainer {
+    width: 100%;
+}

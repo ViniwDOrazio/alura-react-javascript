@@ -2,15 +2,14 @@ import Banner from "componentes/cabecalho/banner";
 import ListaCartoes from "componentes/conteudo/listaCartoes";
 import Titulo from "componentes/titulo";
 
-export default function Inicio() {
+export default function Favoritos() {
   return (
     <>
-      <Banner bannerIndex={1} />
+      <Banner bannerIndex={2} />
       <Titulo>
-        <h1>Lista de Filmes</h1>
+        <h1>Favoritados</h1>
       </Titulo>
       <ListaCartoes />
     </>
-    
   )
 }

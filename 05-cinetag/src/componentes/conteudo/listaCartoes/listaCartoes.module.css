@@ -1,0 +1,6 @@
+.lista {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 20em;
+    text-align: center;
+}
