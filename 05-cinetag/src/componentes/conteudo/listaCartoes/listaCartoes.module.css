@@ -1,6 +1,4 @@
 .lista {
     display: flex;
     justify-content: space-around;
-    margin: 2em 10em;
-    text-align: center;
 }
