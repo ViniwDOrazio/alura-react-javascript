@@ -16,6 +16,11 @@ export default function ListaCartoes({listarApenasFavoritos}: PropsListagem) {
   }
   useEffect(() => {
     CarregarConteudoPagina()
+    // fetch('https://my-json-server.typicode.com/monicahillman/cinetag-api/videos')
+      // .then(resposta => resposta.json())
+      // .then(dados => {
+      //   setListaVideosFav(dados)
+      // })
   }, []);
 
   function aoFavoritar(videoFavoritar: iCartao) {

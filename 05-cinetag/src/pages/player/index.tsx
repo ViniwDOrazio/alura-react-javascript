@@ -9,6 +9,19 @@ import NaoEncontrada from "pages/naoEncontrada";
 
 export default function Player() {
     const parametros = useParams();
+
+    // const [video, setVideo] = useState();
+    // useEffect(() => {
+    //     fetch(`https://my-json-server.typicode.com/monicahillman/cinetag-api/videos?id=${parametros.id}`)
+    //         .then(resposta => resposta.json())
+    //         .then(dados => {
+    //             setVideo(...dados)
+    //             if (!video){
+    //                 return <NaoEncontrada />
+    //             }
+    //         })
+    // }, [])
+
     const video = ListaVideos.find((video) => {
         return video.id === Number(parametros.id);
     })
