@@ -8,7 +8,7 @@ interface iPaginaListagem{
   titulo: string
 }
 
-export default function Inicio({bannerIndex, listarApenasFavoritos, titulo}:iPaginaListagem) {
+export default function PaginaListagem({bannerIndex, listarApenasFavoritos, titulo}:iPaginaListagem) {
   return (
     <>
       <Banner bannerIndex={bannerIndex} />
