@@ -2,14 +2,20 @@ import Banner from "componentes/cabecalho/banner";
 import ListaCartoes from "componentes/conteudo/listaCartoes";
 import Titulo from "componentes/titulo";
 
-export default function Inicio() {
+interface iPaginaListagem{
+  bannerIndex: number
+  listarApenasFavoritos: boolean
+  titulo: string
+}
+
+export default function Inicio({bannerIndex, listarApenasFavoritos, titulo}:iPaginaListagem) {
   return (
     <>
-      <Banner bannerIndex={1} />
+      <Banner bannerIndex={bannerIndex} />
       <Titulo>
-        <h1>Lista de Filmes</h1>
+        <h1>{titulo}</h1>
       </Titulo>
-      <ListaCartoes />
+      <ListaCartoes listarApenasFavoritos={listarApenasFavoritos}/>
     </>
     
   )
