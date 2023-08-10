@@ -17,3 +17,6 @@ TypeScript
 Curso Javascript escrito em TypeScript
 	.\05-cinetag\
 		Curso 6 - React: praticando React com Js - 8h - Alura
+
+	.\06-performance\
+		Curso 7 - React: otimizando a performance
