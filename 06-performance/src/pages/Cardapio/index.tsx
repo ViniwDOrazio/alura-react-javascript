@@ -1,12 +1,12 @@
 import styles from './Cardapio.module.scss';
 import Buscador from './Buscador';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import Filtros from './Filtros';
 import Ordenador from './Ordenador';
 import Itens from './Itens';
 import stylesTema from 'styles/Tema.module.scss';
 
-export default function Cardapio() {
+function Cardapio() {
   const [busca, setBusca] = useState('');
   const [filtro, setFiltro] = useState<number | null>(null);
   const [ordenador, setOrdenador] = useState('');
@@ -22,3 +22,5 @@ export default function Cardapio() {
     </section>
   );
 }
+
+export default memo(Cardapio);
