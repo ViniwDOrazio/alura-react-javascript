@@ -2,17 +2,14 @@ import styles from './Ordenador.module.scss';
 import opcoes from './opcoes.json';
 import React, { memo, useState } from 'react';
 import classNames from 'classnames';
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 interface Props { 
   ordenador: string,
   setOrdenador: React.Dispatch<React.SetStateAction<string>>
 }
 
-function Ordenador({
-  ordenador,
-  setOrdenador
-}: Props) {
+function Ordenador({ordenador, setOrdenador}: Props) {
   const [aberto, setAberto] = useState(false);
   const nomeOrdenador = ordenador && opcoes.find(opcao => opcao.value === ordenador)?.nome;
   return (
@@ -25,6 +22,12 @@ function Ordenador({
       onBlur={() => setAberto(false)}
     >
       <span>{nomeOrdenador || 'Ordenar Por'}</span>
+
+      {/* <MdKeyboardArrowUp 
+        size={20} 
+        style={{
+          transform: `rotate(${aberto ? 0 : 180}deg) `
+        }} /> */}
       {aberto ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} /> }
       <div className={classNames({
         [styles.ordenador__options]: true,
